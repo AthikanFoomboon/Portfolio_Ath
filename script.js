@@ -31,9 +31,10 @@ function render(filter){
  const filtered=filter==="all"?projects:projects.filter(function(p){return p.category===filter||(filter==="dashboard"&&p.tags.indexOf("Dashboard")!==-1)});
  grid.innerHTML=filtered.map(function(p){return cardHTML(p,filter==="all"&&p.featured)}).join("");
 }
-function modalImage(p,index){
- const images=Array.isArray(p.images)&&p.images.length?p.images:[{src:p.cover||"assets/preview-fallback.svg",caption:p.title}];
- return images[Math.max(0,Math.min(index,images.length-1))];
+function projectPhotos(p){
+ return Array.isArray(p.images)&&p.images.length
+  ? p.images
+  : [{src:p.cover||"assets/preview-fallback.svg",caption:p.title}];
 }
 function openProject(id,changeHash){
  const p=projects.find(function(x){return x.id===id});
@@ -43,7 +44,7 @@ function openProject(id,changeHash){
   previousBodyOverflow=document.body.style.overflow;
  }
  active=p;photoIndex=0;
- const photos=Array.isArray(p.images)&&p.images.length?p.images:[modalImage(p,0)];
+ const photos=projectPhotos(p);
  const image=photos[0];
  const features=Array.isArray(p.features)?p.features.filter(Boolean):[];
  content.innerHTML=
@@ -83,7 +84,7 @@ function openProject(id,changeHash){
 }
 function showPhoto(index){
  if(!active)return;
- const photos=Array.isArray(active.images)&&active.images.length?active.images:[modalImage(active,0)];
+ const photos=projectPhotos(active);
  photoIndex=Math.max(0,Math.min(index,photos.length-1));
  const entry=photos[photoIndex];
  const img=document.getElementById("modal-photo");
