@@ -106,6 +106,26 @@ document.getElementById("share-portfolio").addEventListener("click",async functi
  catch(e){const field=document.createElement("textarea");field.value=url;document.body.appendChild(field);field.select();let success=false;try{success=document.execCommand("copy")}catch(err){}field.remove();notify(success?"คัดลอกลิงก์ Portfolio แล้ว":"ไม่สามารถคัดลอกอัตโนมัติได้")}
 });
 document.getElementById("year").textContent=new Date().getFullYear();
+function renderHeroWorkspace(){
+ const board=document.getElementById("hero-project-windows");
+ if(!board)return;
+ const sizes=["is-wide","is-medium","","",""];
+ board.innerHTML=projects.map(function(p,index){
+  const domain=p.live?new URL(p.live).hostname.replace(/^www\./,""):"DESIGN PREVIEW";
+  const src=p.cover||(p.images&&p.images[0]&&p.images[0].src)||"assets/preview-fallback.svg";
+  return '<button type="button" class="showcase-window '+(sizes[index]||"")+'" data-project="'+clean(p.id)+'" aria-label="ดูรายละเอียดโปรเจกต์ '+clean(p.title)+'">'
+    +'<span class="showcase-browser-bar" aria-hidden="true"><span class="showcase-browser-dots"><i></i><i></i><i></i></span><span class="showcase-browser-address">'+clean(domain)+'</span><span class="showcase-browser-action">↗</span></span>'
+    +'<img class="showcase-screenshot" src="'+clean(src)+'" alt="" loading="eager" decoding="async">'
+    +'<span class="showcase-window-footer"><span class="showcase-window-label">'+clean(p.title)+'</span><span class="showcase-window-number">'+String(index+1).padStart(2,"0")+'</span></span>'
+    +'</button>';
+ }).join("");
+ board.addEventListener("click",function(event){
+  const tile=event.target.closest(".showcase-window[data-project]");
+  if(tile)openProject(tile.dataset.project,true);
+ });
+}
+
+renderHeroWorkspace();
 render("all");
 const deep=location.hash.match(/^#project-([a-z0-9-]+)$/);
 if(deep)requestAnimationFrame(function(){openProject(deep[1],false)});
