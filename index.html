@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0c111c">
-  <meta name="description" content="Athikan — Portfolio รวมผลงานออกแบบและพัฒนาเว็บไซต์ เว็บแอปพลิเคชัน และระบบจัดการข้อมูลที่ใช้งานได้จริง">
-  <meta property="og:title" content="ATHIKAN — Digital Product Portfolio">
-  <meta property="og:description" content="Selected works in Web Development, UI/UX and Digital Products.">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta name="description" content="Athikan — Portfolio รวมผลงานออกแบบและพัฒนาเว็บไซต์ เว็บแอปพลิเคชัน และระบบจัดการข้อมูล">
+  <meta property="og:title" content="ATHIKAN — Portfolio">
+  <meta property="og:description" content="Selected work in Web Development, UI/UX and Digital Products.">
   <meta property="og:type" content="website">
-  <title>ATHIKAN — Digital Product Portfolio</title>
+  <title>ATHIKAN — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="data.js" defer></script>
@@ -19,95 +19,108 @@
 </head>
 <body>
   <div id="scroll-progress" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
   <header class="site-header" id="top">
-    <div class="header-inner page-wrap">
-      <a class="brand" href="#home" aria-label="Athikan — กลับหน้าแรก"><span class="brand-symbol">a<span class="brand-dot">.</span></span><span class="brand-word">ATHIKAN <small>PORTFOLIO / 2026</small></span></a>
-      <nav id="primary-navigation" class="nav-links" aria-label="เมนูหลัก">
-        <a href="#home" class="nav-link is-active">หน้าแรก</a>
-        <a href="#projects" class="nav-link">ผลงาน</a>
-        <a href="#expertise" class="nav-link">ความเชี่ยวชาญ</a>
-        <a href="#about" class="nav-link">เกี่ยวกับผม</a>
+    <div class="page-wrap header-inner">
+      <a class="brand" href="#home" aria-label="Athikan กลับหน้าแรก">athikan<span>.</span></a>
+      <nav class="nav-links" id="primary-navigation" aria-label="เมนูหลัก">
+        <a class="nav-link is-active" href="#home">หน้าแรก</a>
+        <a class="nav-link" href="#projects">ผลงาน</a>
+        <a class="nav-link" href="#expertise">ความเชี่ยวชาญ</a>
+        <a class="nav-link" href="#about">เกี่ยวกับผม</a>
+        <a class="nav-link nav-contact" href="#contact">ติดต่อ</a>
       </nav>
-      <a class="header-cta" href="#contact">LET'S CONNECT <span aria-hidden="true">↗</span></a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="เปิดเมนู"><span></span><span></span></button>
+      <a class="header-cta" href="#contact">ติดต่อ / แชร์ <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
     </div>
   </header>
+
   <main>
     <section class="hero-section" id="home" aria-labelledby="hero-title">
-      <div class="hero-mesh" aria-hidden="true"></div>
       <div class="page-wrap hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow hero-eyebrow"><span class="live-dot"></span> DIGITAL DESIGN & DEVELOPMENT <span class="eyebrow-line"></span> 2026</div>
-          <h1 id="hero-title">เปลี่ยนไอเดีย<br>ให้เป็น<span class="type-accent">ผลงาน</span><br>ที่<span class="hero-underline">ใช้ได้จริง<span class="underline-stroke"></span></span></h1>
-          <p class="hero-description">ผลงานการออกแบบและพัฒนาเว็บไซต์ เว็บแอปพลิเคชัน และระบบดิจิทัลที่ผสาน <strong>การใช้งานที่ดี</strong> เข้ากับ <strong>ดีไซน์ที่มีรายละเอียด</strong></p>
-          <div class="hero-actions"><a href="#projects" class="btn btn-primary">สำรวจผลงานของผม <span aria-hidden="true">↗</span></a><a href="#about" class="btn btn-outline">รู้จักผมเพิ่มเติม <span aria-hidden="true">↓</span></a></div>
-          <div class="hero-footnote"><span class="scroll-line" aria-hidden="true"></span> SCROLL TO EXPLORE <span class="hero-footnote-num">01 / 05</span></div>
+          <span class="eyebrow">PORTFOLIO / 2026</span>
+          <h1 id="hero-title">ออกแบบให้เรียบง่าย<br><span>พัฒนาให้ใช้ได้จริง</span></h1>
+          <p class="hero-description">ผลงานการออกแบบและพัฒนาเว็บไซต์ เว็บแอปพลิเคชัน และระบบดิจิทัล ที่ให้ความสำคัญกับความเรียบง่ายและประสบการณ์ใช้งาน</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">ดูผลงานทั้งหมด <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#about">เกี่ยวกับผม</a>
+          </div>
+          <p class="hero-meta">5 Projects <span aria-hidden="true">·</span> 3 Live Websites</p>
         </div>
-        <div class="hero-visual" aria-label="จอมอนิเตอร์แสดงตัวอย่างโปรเจกต์ที่สามารถคลิกดูรายละเอียดได้">
-          <div class="desk-scene">
-            <div class="desk-scene-aura" aria-hidden="true"></div>
-            <div class="desk-scene-note" aria-hidden="true"><span>✳</span><span>ONE WORKSPACE.<br><strong>FIVE DIGITAL EXPERIENCES.</strong></span></div>
-            <div class="desktop-display">
-              <div class="desktop-display-shell">
-                <div class="desktop-display-camera" aria-hidden="true"></div>
-                <div class="desktop-display-screen">
-                  <div class="workspace-topline">
-                    <div class="workspace-identity"><span class="workspace-logo">a<span>.</span></span><span><strong>ATHIKAN.STUDIO</strong><small>SELECTED PROJECTS / 2026</small></span></div>
-                    <div class="workspace-indicator"><span class="workspace-indicator-dot"></span><span>INTERACTIVE SHOWCASE</span></div>
-                  </div>
-                  <div class="workspace-caption"><span>MY DIGITAL WORKSPACE</span><span>05 PROJECT WINDOWS <span aria-hidden="true">↗</span></span></div>
-                  <div id="hero-project-windows" class="hero-project-windows" aria-label="เลือกโปรเจกต์เพื่อดูรายละเอียด"></div>
-                  <div class="workspace-taskbar" aria-hidden="true">
-                    <div><span class="taskbar-mark">✳</span> <span>5 PROJECTS IN ONE PLACE</span></div>
-                    <div class="taskbar-dots"><span></span><span></span><span></span></div>
-                  </div>
+        <div class="hero-visual" aria-label="ตัวอย่างผลงานทั้งหมดในหน้าจอคอมพิวเตอร์ คลิกเพื่อดูรายละเอียด">
+          <div class="desktop-showcase">
+            <div class="monitor">
+              <div class="monitor-screen">
+                <div class="monitor-toolbar">
+                  <span class="monitor-wordmark">Selected work</span>
+                  <span class="monitor-helper">คลิกที่โปรเจกต์เพื่อดูรายละเอียด <span aria-hidden="true">↗</span></span>
                 </div>
-                <div class="desktop-display-chin"><span class="display-chin-brand">ATHIKAN / DESIGN & DEVELOPMENT</span><span class="desktop-display-power"></span></div>
+                <div id="hero-project-windows" class="hero-project-windows" aria-label="โปรเจกต์ทั้งหมด 5 รายการ"></div>
               </div>
-              <div class="desktop-display-neck"></div>
-              <div class="desktop-display-foot"></div>
+              <div class="monitor-chin"><span class="monitor-maker">a.</span></div>
             </div>
-            <div class="desk-surface" aria-hidden="true"></div>
-            <div class="desk-accessories" aria-hidden="true">
-              <div class="desktop-keyboard">
-                <div class="key-row"><span>esc</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>⌫</span></div>
-                <div class="key-row"><span>tab</span><span>Q</span><span>W</span><span>E</span><span>R</span><span>T</span><span>Y</span><span>U</span><span>I</span><span>O</span><span>P</span><span>↵</span></div>
-                <div class="key-row"><span>⇧</span><span>A</span><span>S</span><span>D</span><span>F</span><span>G</span><span>H</span><span>J</span><span>K</span><span>L</span><span>;</span><span>⇧</span></div>
-                <div class="key-row"><span>fn</span><span>⌃</span><span>⌥</span><span>⌘</span><span class="keyboard-space"></span><span>⌘</span><span>⌥</span><span>←</span><span>↓</span><span>→</span></div>
-              </div>
-              <div class="desktop-mouse"><span class="desktop-mouse-wheel"></span></div>
+            <div class="monitor-neck" aria-hidden="true"></div>
+            <div class="monitor-foot" aria-hidden="true"></div>
+            <div class="desktop-accessories" aria-hidden="true">
+              <div class="minimal-keyboard"><span></span></div>
+              <div class="minimal-mouse"><span></span></div>
             </div>
-            <div class="hero-image-sticker" aria-hidden="true"><span class="sticker-icon">↗</span><strong>5</strong><small>SELECTED<br>PROJECTS</small></div>
-            <span class="desk-scene-hint" aria-hidden="true"><span class="hint-pointer">↖</span> CLICK A PROJECT TO EXPLORE</span>
           </div>
         </div>
       </div>
-      <div class="page-wrap hero-bottom"><span>01 — SELECTED PORTFOLIO</span><span>SCROLL DOWN <span class="down-arrow">↓</span></span></div>
     </section>
-    <section class="numbers-strip" aria-label="ภาพรวมผลงาน"><div class="page-wrap numbers-inner">
-      <div class="number-item"><strong>05<span>+</span></strong><div>SELECTED PROJECTS<small>ผลงานที่คัดสรร</small></div></div>
-      <div class="number-separator"></div>
-      <div class="number-item"><strong>03<span>↗</span></strong><div>LIVE WEBSITES<small>เว็บไซต์ที่เปิดใช้งาน</small></div></div>
-      <div class="number-separator"></div>
-      <div class="number-item"><strong>∞</strong><div>IDEAS TO EXPLORE<small>พร้อมเรียนรู้และพัฒนา</small></div></div>
-      <span class="strip-asterisk" aria-hidden="true">✳</span>
-    </div></section>
+
     <section class="work-section section-pad" id="projects" aria-labelledby="work-title">
       <div class="page-wrap">
-        <div class="section-head work-head"><div><span class="section-kicker"><span class="tiny-star">✦</span> 01 / SELECTED WORK</span><h2 id="work-title">ผลงานที่<span class="serif-italic">สร้างขึ้นจริง</span><span class="period">.</span></h2><p>จากไอเดียสู่หน้าจอจริง — ตัวอย่างเว็บและระบบที่ออกแบบเพื่อแก้ปัญหาการใช้งานในหลากหลายรูปแบบ</p></div><div class="section-side-note">A CURATED COLLECTION<br>OF DIGITAL EXPERIENCES<br>2026 ©</div></div>
-        <div class="filters-row"><div class="filter-buttons" role="group" aria-label="กรองประเภทผลงาน"><button class="filter is-selected" data-filter="all" aria-pressed="true">ทั้งหมด <span>05</span></button><button class="filter" data-filter="system" aria-pressed="false">Web Application</button><button class="filter" data-filter="dashboard" aria-pressed="false">Dashboard</button><button class="filter" data-filter="creative" aria-pressed="false">Creative & UI</button></div><div class="filter-note">CLICK TO EXPLORE EACH PROJECT <span>↗</span></div></div>
+        <div class="section-heading">
+          <div><span class="section-kicker">01 / WORK</span><h2 id="work-title">ผลงานที่คัดสรร</h2></div>
+          <p>ตัวอย่างเว็บไซต์และระบบที่ได้ออกแบบและพัฒนา</p>
+        </div>
+        <div class="filters-row">
+          <div class="filter-buttons" role="group" aria-label="กรองประเภทผลงาน">
+            <button class="filter is-selected" type="button" data-filter="all" aria-pressed="true">ทั้งหมด</button>
+            <button class="filter" type="button" data-filter="system" aria-pressed="false">Web Application</button>
+            <button class="filter" type="button" data-filter="dashboard" aria-pressed="false">Dashboard</button>
+            <button class="filter" type="button" data-filter="creative" aria-pressed="false">Creative & UI</button>
+          </div>
+        </div>
         <div class="projects-grid" id="project-grid" aria-live="polite"></div>
-        <div class="work-bottom"><div><span class="small-spark">✳</span> EVERY PIXEL, EVERY INTERACTION <span class="small-spark">✳</span></div><a href="#expertise" class="text-link">ดูแนวทางการทำงาน <span>↗</span></a></div>
       </div>
     </section>
-    <section class="expertise-section section-pad" id="expertise" aria-labelledby="expertise-title"><div class="page-wrap"><div class="expertise-top"><div><span class="section-kicker light"><span class="tiny-star">✦</span> 02 / WHAT I DO</span><h2 id="expertise-title">คิดให้ครบ<br><span>สร้างให้เป็นจริง</span><span class="period">.</span></h2></div><p>ให้ความสำคัญกับทั้งประสบการณ์ของผู้ใช้ ความชัดเจนของข้อมูล และการทำงานของระบบ เพื่อเปลี่ยนความซับซ้อนให้กลายเป็นสิ่งที่เข้าใจง่าย</p></div>
-      <div class="expertise-list"><div class="expertise-row"><span class="expertise-no">01</span><span class="expertise-icon">◈</span><div><h3>Web Application Development</h3><p>พัฒนาเว็บแอปพลิเคชันและระบบจัดการข้อมูลที่ตอบโจทย์การทำงาน</p></div><span class="expertise-arrow">↗</span></div><div class="expertise-row"><span class="expertise-no">02</span><span class="expertise-icon">✳</span><div><h3>UI / UX & Interface Design</h3><p>ออกแบบหน้าจอและลำดับการใช้งานที่ใช้ง่าย ชัดเจน และมีเอกลักษณ์</p></div><span class="expertise-arrow">↗</span></div><div class="expertise-row"><span class="expertise-no">03</span><span class="expertise-icon">▦</span><div><h3>Dashboard & Data Visualization</h3><p>แปลงข้อมูลให้เป็นภาพรวมที่อ่านเข้าใจและช่วยในการตัดสินใจ</p></div><span class="expertise-arrow">↗</span></div><div class="expertise-row"><span class="expertise-no">04</span><span class="expertise-icon">⌘</span><div><h3>Responsive Digital Experiences</h3><p>สร้างประสบการณ์ที่ต่อเนื่องทั้งบนคอมพิวเตอร์ แท็บเล็ต และมือถือ</p></div><span class="expertise-arrow">↗</span></div></div>
-      <div class="expertise-marquee" aria-hidden="true"><div>DESIGN • DEVELOP • IMPROVE • EXPERIENCE • DESIGN • DEVELOP • IMPROVE • EXPERIENCE •&nbsp;</div></div>
-    </div></section>
-    <section class="about-section section-pad" id="about" aria-labelledby="about-title"><div class="page-wrap about-grid"><div class="about-visual"><div class="about-card"><div class="about-visual-top"><span>THE PERSON BEHIND THE PIXELS</span><span>© 2026</span></div><span class="about-letter">a<span>.</span></span><div class="about-visual-bottom"><span>DESIGN THINKING<br>MEETS REAL-WORLD BUILDING</span><span class="about-cross">✳</span></div></div><span class="about-caption">ALWAYS CURIOUS. ALWAYS BUILDING.</span></div><div class="about-copy"><span class="section-kicker"><span class="tiny-star">✦</span> 03 / ABOUT ME</span><h2 id="about-title">สวัสดีครับ<br>ผม <span class="serif-italic">Athikan</span><span class="period">.</span></h2><p class="about-lead">ผมสนใจการสร้างผลิตภัณฑ์ดิจิทัลที่ไม่ได้เพียงดูดี แต่ต้องช่วยให้ผู้คนใช้งานได้สะดวกขึ้นจริง</p><p>Portfolio นี้รวบรวมงานด้านเว็บไซต์ ระบบบริหารจัดการข้อมูล การนำเสนอข้อมูลผ่าน Dashboard และการออกแบบประสบการณ์ผู้ใช้ โดยเน้นการสื่อสารเนื้อหาให้ชัดเจนและทำให้เทคโนโลยีเข้าถึงง่าย</p><div class="about-values"><span>USER-CENTERED</span><span>DETAIL-ORIENTED</span><span>CONTINUOUS LEARNING</span></div><a href="#projects" class="btn btn-dark">สำรวจโปรเจกต์ทั้งหมด <span>↗</span></a></div></div></section>
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="page-wrap"><div class="contact-topline"><span><span class="live-dot"></span> HAVE AN IDEA?</span><span>LET'S MAKE IT HAPPEN. — 2026</span></div><div class="contact-layout"><div><span class="contact-overline">GREAT PRODUCTS START WITH GREAT CONVERSATIONS.</span><h2 id="contact-title">มาสร้างอะไร<br><em>ดี ๆ</em> ด้วยกัน<span class="period">.</span></h2><p>สนใจร่วมงานหรืออยากพูดคุยเรื่องการออกแบบและพัฒนาเว็บ? ลองสำรวจผลงานและแชร์ Portfolio นี้ต่อได้เลยครับ</p></div><div class="contact-actions"><button class="share-button" id="share-portfolio" type="button"><span class="share-icon">↗</span><span>แชร์ Portfolio <small>SHARE THIS PAGE</small></span></button><a href="#projects" class="contact-secondary">ดูผลงานอีกครั้ง <span>↗</span></a><div class="share-feedback" id="share-feedback" role="status" aria-live="polite"></div></div></div><div class="contact-bottom"><span>© <span id="year">2026</span> ATHIKAN. ALL RIGHTS RESERVED.</span><span>MADE WITH INTENTION & ATTENTION.</span><a href="#top">BACK TO TOP ↑</a></div></div></section>
+
+    <section class="expertise-section section-pad" id="expertise" aria-labelledby="expertise-title">
+      <div class="page-wrap">
+        <div class="section-heading"><div><span class="section-kicker">02 / APPROACH</span><h2 id="expertise-title">สิ่งที่ผมให้ความสำคัญ</h2></div></div>
+        <div class="expertise-grid">
+          <article class="expertise-item"><span class="expertise-number">01</span><h3>Web Development</h3><p>สร้างเว็บและระบบจัดการข้อมูลที่ใช้งานได้จริง ดูแลง่าย และมีโครงสร้างชัดเจน</p></article>
+          <article class="expertise-item"><span class="expertise-number">02</span><h3>UI / UX Design</h3><p>ออกแบบหน้าจอให้เข้าใจง่าย ลดความซับซ้อน และสื่อสารเนื้อหาได้ตรงจุด</p></article>
+          <article class="expertise-item"><span class="expertise-number">03</span><h3>Dashboard & Data</h3><p>จัดระเบียบข้อมูลและนำเสนอภาพรวมที่อ่านง่าย เพื่อช่วยให้ตัดสินใจได้ดีขึ้น</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="page-wrap about-grid">
+        <div class="about-mark" aria-hidden="true"><span>a.</span><small>BUILDING DIGITAL EXPERIENCES</small></div>
+        <div class="about-copy"><span class="section-kicker">03 / ABOUT</span><h2 id="about-title">สวัสดีครับ ผม Athikan</h2>
+          <p class="about-lead">ผมสนใจการสร้างผลิตภัณฑ์ดิจิทัลที่ไม่เพียงดูดี แต่ต้องทำให้การใช้งานสะดวกขึ้นจริง</p>
+          <p>Portfolio นี้รวบรวมงานด้านเว็บไซต์ ระบบบริหารจัดการข้อมูล และ Dashboard โดยเน้นการออกแบบที่เรียบง่าย อ่านเข้าใจ และตอบโจทย์ผู้ใช้</p>
+          <a class="inline-link" href="#projects">ดูโปรเจกต์ทั้งหมด <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="page-wrap contact-layout">
+        <div><span class="section-kicker">04 / CONNECT</span><h2 id="contact-title">มาสร้างผลงานดี ๆ ด้วยกัน</h2><p>สนใจร่วมงานหรืออยากแชร์ Portfolio นี้? สามารถคัดลอกลิงก์ส่งต่อได้เลยครับ</p></div>
+        <div class="contact-actions"><button class="btn btn-primary" id="share-portfolio" type="button">แชร์ Portfolio <span aria-hidden="true">↗</span></button><div id="share-feedback" class="share-feedback" aria-live="polite"></div></div>
+      </div>
+      <div class="page-wrap contact-bottom"><span>© <span id="year">2026</span> ATHIKAN</span><span>MADE WITH CARE</span><a href="#top">กลับด้านบน ↑</a></div>
+    </section>
   </main>
-  <dialog class="project-modal" id="project-modal" aria-labelledby="modal-title"><div class="modal-inner"><button class="modal-close" id="modal-close" aria-label="ปิดรายละเอียด">✕ <span>CLOSE</span></button><div class="modal-content" id="modal-content"></div></div></dialog>
+  <dialog class="project-modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal-inner"><button class="modal-close" id="modal-close" aria-label="ปิดรายละเอียด" type="button">✕ <span>ปิด</span></button><div class="modal-content" id="modal-content"></div></div>
+  </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-</body></html>
+</body>
+</html>
