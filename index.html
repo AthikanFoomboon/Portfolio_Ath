@@ -119,7 +119,13 @@
     </section>
   </main>
   <dialog class="project-modal" id="project-modal" aria-labelledby="modal-title">
-    <div class="modal-inner"><button class="modal-close" id="modal-close" aria-label="ปิดรายละเอียด" type="button">✕ <span>ปิด</span></button><div class="modal-content" id="modal-content"></div></div>
+    <div class="modal-inner">
+      <div class="modal-topbar">
+        <button class="modal-close" id="modal-close" type="button" aria-label="ปิดรายละเอียด" title="ปิดรายละเอียด"><span aria-hidden="true">✕</span></button>
+      </div>
+      <div class="modal-content" id="modal-content" tabindex="-1"></div>
+      <div class="modal-footer" id="modal-footer" hidden></div>
+    </div>
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
